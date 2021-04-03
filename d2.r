@@ -9,8 +9,9 @@ for (i in 1:nrow(DummyStyle)) {
   for (j in 1:length(idx)) {
     cat(as.character(DummyStyle[i, "風格"]))
     cat(levels(idx)[j])
-    if (is.na(DummyStyle[i, "風格"])) {
-      next
+    if (is.na(DummyStyle$風格[i])) {
+       Dummy[i,j] <- 0
+       next
     }
     if (   as.character(DummyStyle[i, "風格"])  ==   levels(idx)[j]  )  {
       writeLines("yes")

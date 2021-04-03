@@ -108,3 +108,7 @@ for (i in 1:nrow(DummyStyle)) {
 for (j in 1:length(idx)){
   cat(levels(idx)[j])
 }
+
+for (j in 1:length(idx)){
+  writeLines(typeof(levels(idx)[j]))
+}
